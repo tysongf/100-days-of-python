@@ -10,17 +10,17 @@ difficulty_guesses = {
 }
 
 def new_game():
+
     clear()
     secret_number = random.randint(1, 101)
-
     d = 0
     while(d not in ["e", "n", "d"]):
         d = input("\nSelect Difficulty\n\n(e)asy (n)ormal (d)ifficult: ")
     clear()
 
     num_guesses = difficulty_guesses[d]
-
     guess = 0
+
     while(num_guesses > 0 and guess != secret_number):
         print(f"\n{num_guesses} guesses left.\n")
         guess = int(input("Guess: "))
@@ -31,9 +31,9 @@ def new_game():
             print("\nToo Low")
 
     if(guess == secret_number):
-        print("\nYou Got It! 🎉\n")
+        print("\n🎉🎉🎉 You Got It 🎉🎉🎉\n")
     else:
-        print("\nYou Lost! 💩\n")
+        print("\n💩💩💩 You Lose 💩💩💩\n")
 
     play_again = ""
     while(play_again not in ["y", "n"]):
