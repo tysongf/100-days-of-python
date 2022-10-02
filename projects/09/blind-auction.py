@@ -1,7 +1,11 @@
 import os
 import gavel
+
+
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
+
+
 clear()
 
 print(gavel)
@@ -9,7 +13,7 @@ print("Welcome to the Blind Auction System!")
 
 bids = {}
 more_bidders = "y"
-while(more_bidders == "y"):
+while (more_bidders == "y"):
     clear()
     print(gavel.logo)
     name = input("Bidder name: ")
@@ -20,7 +24,7 @@ while(more_bidders == "y"):
 highest_bid = {"amt": 0}
 for b in bids:
     if bids[b] > highest_bid["amt"]:
-        highest_bid = { "name": b, "amt": bids[b] }
+        highest_bid = {"name": b, "amt": bids[b]}
 
 clear()
 print(gavel.logo)

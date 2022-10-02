@@ -5,7 +5,10 @@ def checkPrime(num):
             return False
     return True
 
+
 user_input = int(input("Enter a number: "))
 
-if(checkPrime(user_input)): print(f"{user_input} is a prime number.")
-else: print(f"{user_input} is not a prime number.")
+if (checkPrime(user_input)):
+    print(f"{user_input} is a prime number.")
+else:
+    print(f"{user_input} is not a prime number.")

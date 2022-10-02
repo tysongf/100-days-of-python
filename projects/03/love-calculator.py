@@ -3,7 +3,7 @@ their_name = input("Enter their full name: ")
 
 combined_str = (your_name + their_name).lower()
 
-#TRUE LOVE
+# TRUE LOVE
 
 true_score = 0
 true_score += combined_str.count('t')
@@ -21,8 +21,7 @@ total_score = true_score * 10 + love_score
 
 print(f"Your love score is: {total_score}")
 
-if(total_score < 10) or (total_score > 90):
-   print("You go together like coke and mentos.")
-elif(total_score >= 40) and (total_score <= 50):
-   print("You are alright together")
-
+if (total_score < 10) or (total_score > 90):
+    print("You go together like coke and mentos.")
+elif (total_score >= 40) and (total_score <= 50):
+    print("You are alright together")

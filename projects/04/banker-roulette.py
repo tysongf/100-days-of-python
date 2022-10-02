@@ -1,4 +1,5 @@
 import random
+
 input_str = input("Enter everyone's name, separated by commas: ")
 bankers = input_str.split(", ")
 print(bankers)
