@@ -13,7 +13,7 @@ print("Welcome to the Blind Auction System!")
 
 bids = {}
 more_bidders = "y"
-while (more_bidders == "y"):
+while more_bidders == "y":
     clear()
     print(gavel.logo)
     name = input("Bidder name: ")

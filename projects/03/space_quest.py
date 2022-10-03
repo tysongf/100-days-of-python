@@ -19,7 +19,7 @@ print('''                                 ::: =,    ;
          ,;VBM                 .,,,,,,,,,,,,,:,::
          ,,==                      `,,,,,,,''')
 print("\n")
-print("Your spaceship has been severly damaged by an unexpected malfuncion.")
+print("Your spaceship has been severely damaged by an unexpected malfunction.")
 print("You've lost all propulsion and you are accelerating toward the surface of an alien planet.\n")
 choice1 = input("Do you try to [land] your ship or [eject]? ").lower()
 if choice1 == "land":
@@ -31,21 +31,25 @@ if choice1 == "land":
     print(f"\nYou grab your supplies and head toward the {choice11}.\n")
     if choice11 == "smoke":
         print(
-            "As you come nearer to the smoke you see what looks to be a small village of lizard people. They regard you with apprehension.")
+            "As you come nearer to the smoke you see what looks to be a small village of lizard people. They regard "
+            "you with apprehension.")
         print(
-            "One of the villagers approaches you and raises his hand. He points at your supplies and makes a hissing noise.\n")
+            "One of the villagers approaches you and raises his hand. He points at your supplies and makes a hissing "
+            "noise.\n")
         choice111 = input("Do you [give] your supplies to the lizardman, or [refuse]? ")
-        if (choice111 == "give"):
+        if choice111 == "give":
             print("\nThe lizard man takes your pack and rummages through it.")
             print(
-                "Satisfied that you do not have any weapons, he invites you to join the other villagers at the camp fire.")
-            print("After a long night of delicious food and festivities, you learn that there is a starport nearby.")
-            print("You reach the starport and are able to board a transport back to your homeworld.")
+                "Satisfied that you do not have any weapons, he invites you to join the other villagers at the camp "
+                "fire.")
+            print("After a long night of delicious food and festivities, you learn that there is a star-port nearby.")
+            print("You reach the star-port and are able to board a transport back to your homeworld.")
             print("\nYOU SURVIVED\n")
         else:
             print("\nYou refuse to let the lizardman take your belongings. You need them to survive!")
             print(
-                "Unfortunately, the lizard people now regard you as a threat. They toss a net over you and wrestle you to the ground.")
+                "Unfortunately, the lizard people now regard you as a threat. They toss a net over you and wrestle "
+                "you to the ground.")
             print("Something heavy slams into your head, and the world goes black.")
             print("The smell of smoke pulls you from your sleep. Your hands and legs are tied to a pole.")
             print("It appears that the lizard people have decided to have you for dinner.")
@@ -53,16 +57,17 @@ if choice1 == "land":
     else:
         print("You arrive at the mountains. There are a few caves that might make a good [shelter].")
         print(
-            "Or you could try to climb to the top of the mountain to see if you can get a good [radio] signal and call for help.\n")
+            "Or you could try to climb to the top of the mountain to see if you can get a good [radio] signal and "
+            "call for help.\n")
         choice121 = input("What do you want to do? ")
         if choice121 == "shelter":
             print("\nYou head for the nearest cave to seek shelter.")
             print("Unfortunately it looks like something else had the same idea.")
-            print("A giant crab-like creatuer is waiting for you inside, and it is hungry...")
+            print("A giant crab-like creature is waiting for you inside, and it is hungry...")
             print("\nGAME OVER\n")
         else:
             print("\nYou reach the top of the mountain and are able to get a good radio signal.")
-            print("You are able to contact a nearby starport and they agree to send out a rescue party.")
+            print("You are able to contact a nearby star-port and they agree to send out a rescue party.")
             print("\nYOU SURVIVED\n")
 if choice1 == "eject":
     print("\nYou hit the eject button and are catapulted into space.")

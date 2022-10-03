@@ -10,7 +10,7 @@ cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 suits = ["♠️", "♣️", "♥️", "♦️"]
 dealer_cards = []
 player_cards = []
-credits = 100.00
+creds = 100.00
 bet = 0.00
 drawing = True
 playing = True
@@ -35,7 +35,7 @@ def get_hand_value(hand):
     for card in hand:
         value += get_card_value(card)
         if card['face'] == "A": aces += 1
-    while (value > 21 and aces > 0):
+    while value > 21 and aces > 0:
         value -= 10
         aces -= 1
     return value
@@ -79,7 +79,7 @@ def dealer_turn():
         hit(dealer_cards)
         table_ui()
         input(f"Dealer draws {last_card(dealer_cards)}")
-    if (get_hand_value(dealer_cards) > 21):
+    if get_hand_value(dealer_cards) > 21:
         print("Dealer Busts!")
         input(f"You won {bet} credits!")
         win()
@@ -92,7 +92,7 @@ def dealer_turn():
     if get_hand_value(dealer_cards) < get_hand_value(player_cards):
         input(f"You Won {bet} credits! ")
         win()
-    elif (get_hand_value(dealer_cards) > get_hand_value(player_cards)):
+    elif get_hand_value(dealer_cards) > get_hand_value(player_cards):
         input("You Lost!\n")
         take_bet()
     else:
@@ -102,39 +102,39 @@ def dealer_turn():
 
 
 def push():
-    global credits, bet
-    credits += bet
+    global creds, bet
+    creds += bet
     take_bet()
 
 
 def win():
-    global credits, bet
-    credits += bet * 2
+    global creds, bet
+    creds += bet * 2
     take_bet()
 
 
 def bj():
-    global credits, bet
+    global creds, bet
     winnings = bet * 2.5
     print("BlackPython!")
     input(f"You won {winnings}")
-    credits += winnings
+    creds += winnings
     take_bet()
 
 
 def take_bet():
-    global playing, credits, bet
+    global playing, creds, bet
     bet = 0
     while bet <= 0:
         clear()
-        print(f"Credits: {credits}\n")
+        print(f"Credits: {creds}\n")
         bet = float(input("Place your Bet: "))
-        if bet > credits:
+        if bet > creds:
             bet = 0
             input("Not enough credits! ")
         elif bet < 0:
             input("Invalid bet! ")
-    credits -= bet
+    creds -= bet
     new_game()
 
 

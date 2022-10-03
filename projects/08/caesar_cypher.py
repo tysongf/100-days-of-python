@@ -7,7 +7,7 @@ def encrypt(message, shift):
     for char in message:
         char_index = alphabet.index(char)
         encrypted_index = char_index + shift
-        if (encrypted_index >= len(alphabet)):
+        if encrypted_index >= len(alphabet):
             encrypted_index -= len(alphabet)
         encrypted_message += alphabet[encrypted_index]
     return encrypted_message
@@ -18,14 +18,14 @@ def decrypt(message, shift):
     for char in message:
         char_index = alphabet.index(char)
         decrypted_index = char_index - shift
-        if (decrypted_index < 0):
+        if decrypted_index < 0:
             decrypted_index += len(alphabet)
         decrypted_message += alphabet[decrypted_index]
     return decrypted_message
 
 
 run_program = True
-while (run_program):
+while run_program:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
     if direction != "encode" and direction != "decode":
         continue
@@ -37,5 +37,5 @@ while (run_program):
     elif direction == "decode":
         print(decrypt(text, shift))
     keep_going = input("Do you want to keep going? y/n: ")
-    if (keep_going != "y"):
+    if keep_going != "y":
         run_program = False

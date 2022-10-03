@@ -1,4 +1,4 @@
-def checkPrime(num):
+def check_prime(num):
     divisors = 0
     for n in range(2, num):
         if num % n == 0:
@@ -8,7 +8,7 @@ def checkPrime(num):
 
 user_input = int(input("Enter a number: "))
 
-if (checkPrime(user_input)):
+if check_prime(user_input):
     print(f"{user_input} is a prime number.")
 else:
     print(f"{user_input} is not a prime number.")

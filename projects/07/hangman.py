@@ -1,6 +1,6 @@
 import random
 
-word_list = ["aardvark", "baboon", "camel", "hamster", "urangutan", "cheetah", "porcupine", "quail", "dolphin"]
+word_list = ["aardvark", "baboon", "camel", "hamster", "orangutan", "cheetah", "porcupine", "quail", "dolphin"]
 
 secret_word = random.choice(word_list)
 letters_guessed = []
@@ -19,7 +19,7 @@ for char in secret_word:
 
 total_matches = 0
 
-while (game_over == 0):
+while game_over == 0:
 
     print_ui()
     guess = input("\nPick a letter: ")
@@ -29,7 +29,7 @@ while (game_over == 0):
         letters_guessed.append(guess)
 
         for n in range(0, len(secret_word)):
-            if (secret_word[n] == guess):
+            if secret_word[n] == guess:
                 solution[n] = guess
                 matches += 1
                 total_matches += 1
@@ -46,7 +46,7 @@ while (game_over == 0):
     else:
         print("You already guessed that letter!")
 
-if (game_over == 1):
+if game_over == 1:
     print_ui()
     print("\n🌈 You Won!\n")
-if (game_over == -1): print("\n💀 You Lost!\n")
+if game_over == -1: print("\n💀 You Lost!\n")

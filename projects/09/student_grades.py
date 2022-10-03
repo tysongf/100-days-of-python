@@ -14,7 +14,7 @@ student_grades = {}
 # Scores 71 - 80: Grade = "Acceptable"
 # Scores 70 or lower: Grade = "Fail"
 
-def getGrade(score):
+def get_grade(score):
     if score > 90:
         return "Outstanding"
     if score > 80:
@@ -25,6 +25,6 @@ def getGrade(score):
 
 
 for grade in student_scores:
-    student_grades[grade] = getGrade(student_scores[grade])
+    student_grades[grade] = get_grade(student_scores[grade])
 
 print(student_grades)
