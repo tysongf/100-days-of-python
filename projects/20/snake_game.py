@@ -3,7 +3,7 @@ from snake import Snake
 import random
 import time
 
-SNAKE_SPEED = 0.2
+SNAKE_SPEED = 0.33
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -21,8 +21,8 @@ screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
 while playing:
-    snake.move()
     time.sleep(SNAKE_SPEED)
+    snake.move()
     screen.update()
 
 screen.exitonclick()
