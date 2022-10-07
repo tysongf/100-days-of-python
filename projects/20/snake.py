@@ -5,10 +5,9 @@ MOVE_DISTANCE = 20
 
 class Snake:
     def __init__(self):
-        start_positions = 
         self.segments = []
 
-        for pos in start_positions:
+        for pos in START_POSITIONS:
             segment = Turtle("square")
             segment.color("white")
             segment.penup()
