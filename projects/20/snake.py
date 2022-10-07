@@ -18,3 +18,15 @@ class Snake:
         for seg in range(len(self.segments) -1, 0, -1):
             self.segments[seg].setpos(self.segments[seg -1].xcor(), self.segments[seg -1].ycor())
         self.segments[0].forward(MOVE_DISTANCE)
+
+    def up(self):
+        self.segments[0].setheading(90)
+    
+    def right(self):
+        self.segments[0].setheading(0)
+
+    def down(self):
+        self.segments[0].setheading(270)
+    
+    def left(self):
+        self.segments[0].setheading(180)
