@@ -1,6 +1,9 @@
 from turtle import Turtle
 import random
 
+MIN_POS = -260
+MAX_POS = 260
+
 class Food(Turtle):
 
     def __init__(self):
@@ -10,4 +13,7 @@ class Food(Turtle):
         self.shapesize(stretch_len=0.5, stretch_wid=0.5)
         self.color("green")
         self.speed("fastest")
-        self.goto(random.randint(-260, 260), random.randint(-260, 260))
+        self.respawn()
+
+    def respawn(self):
+        self.goto(random.randint(MIN_POS, MAX_POS), random.randint(MIN_POS, MAX_POS))

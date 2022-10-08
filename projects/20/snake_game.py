@@ -26,4 +26,10 @@ while playing:
     snake.move()
     screen.update()
 
+    # Detect food collision
+    if snake.head.distance(food) <= 15:
+        print("Om nom nom")
+        food.respawn()
+
+
 screen.exitonclick()

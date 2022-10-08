@@ -18,23 +18,25 @@ class Snake:
             segment.setpos(pos)
             self.segments.append(segment)
 
+        self.head = self.segments[0]
+
     def move(self):
         for seg in range(len(self.segments) -1, 0, -1):
             self.segments[seg].setpos(self.segments[seg -1].xcor(), self.segments[seg -1].ycor())
-        self.segments[0].forward(MOVE_DISTANCE)
+        self.head.forward(MOVE_DISTANCE)
 
     def up(self):
-        if self.segments[0].heading() != DIR_DOWN:
-            self.segments[0].setheading(DIR_UP)
+        if self.head.heading() != DIR_DOWN:
+            self.head.setheading(DIR_UP)
     
     def right(self):
-        if self.segments[0].heading() != DIR_LEFT:
-            self.segments[0].setheading(DIR_RIGHT)
+        if self.head.heading() != DIR_LEFT:
+            self.head.setheading(DIR_RIGHT)
 
     def down(self):
-        if self.segments[0].heading() != DIR_UP:
-            self.segments[0].setheading(DIR_DOWN)
+        if self.head.heading() != DIR_UP:
+            self.head.setheading(DIR_DOWN)
     
     def left(self):
-        if self.segments[0].heading() != DIR_RIGHT:
-            self.segments[0].setheading(DIR_LEFT)
+        if self.head.heading() != DIR_RIGHT:
+            self.head.setheading(DIR_LEFT)
