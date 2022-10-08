@@ -1,6 +1,6 @@
 from turtle import Screen
 from snake import Snake
-import random
+from food import Food
 import time
 
 SNAKE_SPEED = 0.33
@@ -13,6 +13,7 @@ screen.tracer(0)
 
 playing = True
 snake = Snake()
+food = Food()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
