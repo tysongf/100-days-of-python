@@ -10,15 +10,22 @@ DIR_LEFT = 180
 class Snake:
     def __init__(self):
         self.segments = []
-
-        for pos in START_POSITIONS:
-            segment = Turtle("square")
-            segment.color("white")
-            segment.penup()
-            segment.setpos(pos)
-            self.segments.append(segment)
-
+        self.create_snake()
         self.head = self.segments[0]
+
+    def create_snake(self):
+        for pos in START_POSITIONS:
+            self.add_segment(pos)
+
+    def add_segment(self, pos):
+        segment = Turtle("square")
+        segment.color("white")
+        segment.penup()
+        segment.setpos(pos)
+        self.segments.append(segment)
+
+    def grow(self):
+        self.add_segment(self.segments[-1].position())
 
     def move(self):
         for seg in range(len(self.segments) -1, 0, -1):

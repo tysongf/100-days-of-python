@@ -7,7 +7,7 @@ import time
 
 WIDTH = 600
 HEIGHT = 600
-SNAKE_SPEED = 0.33
+SNAKE_SPEED = 0.1
 FOOD_SCORE = 10
 
 screen = Screen()
@@ -36,6 +36,7 @@ while playing:
     if snake.head.distance(food) <= 15:
         print("Om nom nom")
         food.respawn()
+        snake.grow()
         scoreboard.add_score(FOOD_SCORE)
 
     # Detect wall collision
